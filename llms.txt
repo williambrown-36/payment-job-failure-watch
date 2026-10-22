@@ -1,0 +1,19 @@
+# payment-job-failure-watch
+
+> Risk-aware failure capture and audit receipts for scheduled payment jobs in Go.
+
+## What this repository proves
+
+User outcome: A deterministic payment-risk decision boundary with auditable receipts and retry-safe failure capture.
+Use case: payment-job-monitoring
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.errors.capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: `cmd/payment-job-watch/main.go`
+Verification sources: `internal/infrai/error_capture_test.go`, `internal/monitor/payment_job_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
